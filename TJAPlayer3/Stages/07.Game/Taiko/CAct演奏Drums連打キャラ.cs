@@ -17,32 +17,6 @@ namespace TJAPlayer3
 		// メソッド
         public virtual void Start( int player )
 		{
-            //if( CDTXMania.Tx.Effects_Roll[0] != null )
-            //{
-            //    int[] arXseed = new int[] { 56, -10, 200, 345, 100, 451, 600, 260, -30, 534, 156, 363 };
-            //    for (int i = 0; i < 1; i++)
-            //    {
-            //        for (int j = 0; j < 64; j++)
-            //        {
-            //            if (!this.st連打キャラ[j].b使用中)
-            //            {
-            //                this.st連打キャラ[j].b使用中 = true;
-            //                if(this.nTex枚数 <= 1) this.st連打キャラ[j].nColor = 0;
-            //                else this.st連打キャラ[j].nColor = CDTXMania.Random.Next( 0, this.nTex枚数 - 1);
-            //                this.st連打キャラ[j].ct進行 = new CCounter( 0, 1000, 4, CDTXMania.Timer); // カウンタ
-
-            //                //位置生成(β版)
-            //                int nXseed = CDTXMania.Random.Next(12);
-            //                this.st連打キャラ[ j ].fX開始点 = arXseed[ nXseed ];
-            //                this.st連打キャラ[j].fX = arXseed[ nXseed ];
-            //                this.st連打キャラ[j].fY = 720;
-            //                this.st連打キャラ[j].fX加速度 = 5/2;
-            //                this.st連打キャラ[j].fY加速度 = 5/2;
-            //                break;
-            //            }
-            //        }
-            //    }
-            //}
             for (int i = 0; i < 128; i++)
             {
                 if(!RollCharas[i].IsUsing)
@@ -88,12 +62,6 @@ namespace TJAPlayer3
 
 		public override void On活性化()
 		{
-            //for (int i = 0; i < 64; i++)
-            //{
-            //    this.st連打キャラ[i] = new ST連打キャラ();
-            //    this.st連打キャラ[i].b使用中 = false;
-            //    this.st連打キャラ[i].ct進行 = new CCounter();
-            //}
             for (int i = 0; i < 128; i++)
             {
                 RollCharas[i] = new RollChara();
@@ -106,10 +74,6 @@ namespace TJAPlayer3
 		}
 		public override void On非活性化()
 		{
-            //for (int i = 0; i < 64; i++)
-            //{
-            //    this.st連打キャラ[i].ct進行 = null;
-            //}
             for (int i = 0; i < 128; i++)
             {
                 RollCharas[i].Counter = null;
@@ -120,13 +84,6 @@ namespace TJAPlayer3
 		{
 			if( !base.b活性化してない )
 			{
-                //this.nTex枚数 = 4;
-                //this.txChara = new CTexture[ this.nTex枚数 ];
-
-                //for (int i = 0; i < this.nTex枚数; i++)
-                //{
-                //    this.txChara[ i ] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\RollEffect\00\" + i.ToString() + ".png" ) );
-                //}
 				base.OnManagedリソースの作成();
 			}
 		}
@@ -134,10 +91,6 @@ namespace TJAPlayer3
 		{
 			if( !base.b活性化してない )
 			{
-        //        for (int i = 0; i < this.nTex枚数; i++)
-        //        {
-				    //CDTXMania.tテクスチャの解放( ref this.txChara[ i ] );
-        //        }
 				base.OnManagedリソースの解放();
 			}
 		}

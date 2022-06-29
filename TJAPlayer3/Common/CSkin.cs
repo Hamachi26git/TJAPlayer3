@@ -176,28 +176,6 @@ namespace TJAPlayer3
                     Trace.TraceWarning($"ファイルが存在しません。: {this.strファイル名}");
 				    return;
 				}
-////				for( int i = 0; i < 2; i++ )		// #27790 2012.3.10 yyagi 2回読み出しを、1回読みだし＋1回メモリコピーに変更
-////				{
-//                    try
-//                    {
-//                        this.rSound[ 0 ] = CDTXMania.Sound管理.tサウンドを生成する( CSkin.Path( this.strファイル名 ) );
-//                    }
-//                    catch
-//                    {
-//                        this.rSound[ 0 ] = null;
-//                        throw;
-//                    }
-//                    if ( this.rSound[ 0 ] == null )	// #28243 2012.5.3 yyagi "this.rSound[ 0 ].bストリーム再生する"時もCloneするようにし、rSound[1]がnullにならないよう修正→rSound[1]の再生正常化
-//                    {
-//                        this.rSound[ 1 ] = null;
-//                    }
-//                    else
-//                    {
-//                        this.rSound[ 1 ] = ( CSound ) this.rSound[ 0 ].Clone();	// #27790 2012.3.10 yyagi add: to accelerate loading chip sounds
-//                        CDTXMania.Sound管理.tサウンドを登録する( this.rSound[ 1 ] );	// #28243 2012.5.3 yyagi add (登録漏れによりストリーム再生処理が発生していなかった)
-//                    }
-
-                ////				}
 
                 for (int i = 0; i < 2; i++)     // 一旦Cloneを止めてASIO対応に専念
                 {
@@ -318,6 +296,8 @@ namespace TJAPlayer3
         public Cシステムサウンド sound取消音 = null;
         public Cシステムサウンド sound変更音 = null;
         //add
+        public Cシステムサウンド bgmリザルトイン音 = null;
+        public Cシステムサウンド bgmリザルト音 = null;
         public Cシステムサウンド bgmリザルト = null;
         public Cシステムサウンド bgmリザルトループ = null;
         public Cシステムサウンド sound曲決定音 = null;
@@ -553,6 +533,8 @@ namespace TJAPlayer3
             this.bgmコンフィグ画面 = new Cシステムサウンド(@"Sounds\Config BGM.ogg", true, true,  ESoundGroup.SongPlayback);
             this.bgm選曲画面 = new Cシステムサウンド(@"Sounds\Select BGM.ogg", true, true, ESoundGroup.SongPreview);
             this.bgm結果画面 = new Cシステムサウンド(@"Sounds\Result BGM.ogg", true, true, ESoundGroup.SongPreview);
+            this.bgmリザルトイン音 = new Cシステムサウンド(@"Sounds\Result\BGM\Result_In.ogg", false, true, ESoundGroup.SongPlayback);
+            this.bgmリザルト音 = new Cシステムサウンド(@"Sounds\BGM\Result\Result.ogg", true, true, ESoundGroup.SongPlayback);
 
             //this.soundRed               = new Cシステムサウンド( @"Sounds\dong.ogg",            false, false, ESoundType.SoundEffect );
             //this.soundBlue              = new Cシステムサウンド( @"Sounds\ka.ogg",              false, false, ESoundType.SoundEffect );

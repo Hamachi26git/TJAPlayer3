@@ -558,14 +558,14 @@ namespace TJAPlayer3
                     TJAPlayer3.Skin.Game_Lane_Field_X[0] = this.n移動開始X + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離px);
                     TJAPlayer3.Skin.Game_Lane_Field_Y[0] = this.n移動開始Y + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離Ypx);
                     TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointX[0] = this.n移動開始X + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離px);
-                    TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointY[0] = this.n移動開始Y + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離Ypx) + (130 / 2);
+                    //TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointY[0] = this.n移動開始Y + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離Ypx) + (130 / 2);
                 }
                 else
                 {
                     TJAPlayer3.Skin.Game_Lane_Field_X[0] = this.n移動開始X - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離px);
                     TJAPlayer3.Skin.Game_Lane_Field_Y[0] = this.n移動開始Y - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離Ypx);
                     TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointX[0] = this.n移動開始X - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離px);
-                    TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointY[0] = this.n移動開始Y - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離Ypx) + (130 / 2);
+                    //TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointY[0] = this.n移動開始Y - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻) / (double)(this.n総移動時間)) * this.n移動距離Ypx) + (130 / 2);
                 }
 
                 if (((int)CSound管理.rc演奏用タイマ.n現在時刻ms) > this.n移動開始時刻 + this.n総移動時間)
@@ -580,14 +580,14 @@ namespace TJAPlayer3
                     TJAPlayer3.Skin.Game_Lane_Field_X[1] = this.n移動開始X2 + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離px2);
                     TJAPlayer3.Skin.Game_Lane_Field_Y[1] = this.n移動開始Y2 + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離Ypx2);
                     TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointX[1] = this.n移動開始X2 + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離px2);
-                    TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointY[1] = this.n移動開始Y2 + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離Ypx2) + (130 / 2);
+                    //TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointY[1] = this.n移動開始Y2 + (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離Ypx2) + (130 / 2);
                 }
                 else
                 {
                     TJAPlayer3.Skin.Game_Lane_Field_X[1] = this.n移動開始X2 - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離px2);
                     TJAPlayer3.Skin.Game_Lane_Field_Y[1] = this.n移動開始Y2 - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離Ypx2);
                     TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointX[1] = this.n移動開始X2 - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離px2);
-                    TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointY[1] = this.n移動開始Y2 - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離Ypx2) + (130 / 2);
+                    //TJAPlayer3.stage演奏ドラム画面.FlyingNotes.StartPointY[1] = this.n移動開始Y2 - (int)((((int)CSound管理.rc演奏用タイマ.n現在時刻ms - this.n移動開始時刻2) / (double)(this.n総移動時間2)) * this.n移動距離Ypx2) + (130 / 2);
                 }
 
 

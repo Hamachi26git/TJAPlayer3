@@ -227,7 +227,7 @@ namespace TJAPlayer3
 
             //2015.03.26 kairera0467 計算を初期化時にするよう修正。
 
-            #region ゲージの丸め処理
+            #region [ ゲージの丸め処理 ]
             var increase = new float[] { dbゲージ増加量[0], dbゲージ増加量[1], dbゲージ増加量[2] };
             var increaseBranch = new float[3, 3];
             for (int i = 0; i < 3; i++)

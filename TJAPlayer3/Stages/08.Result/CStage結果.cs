@@ -281,7 +281,7 @@ namespace TJAPlayer3
 					base.eフェーズID = CStage.Eフェーズ.共通_フェードイン;
 					if( this.rResultSound != null )
 					{
-						this.rResultSound.t再生を開始する();
+						//this.rResultSound.t再生を開始する();
 					}
 					base.b初めての進行描画 = false;
 				}
@@ -300,8 +300,13 @@ namespace TJAPlayer3
 				}
 
 				// 描画
+				if (!b音声再生 && !TJAPlayer3.Skin.bgmリザルトイン音.b再生中)
+				{
+					TJAPlayer3.Skin.bgmリザルト音.t再生する();
+					b音声再生 = true;
+				}
 
-                TJAPlayer3.Tx.Result_Background?.t2D描画(TJAPlayer3.app.Device, 0, 0);
+				TJAPlayer3.Tx.Result_Background?.t2D描画(TJAPlayer3.app.Device, 0, 0);
 
                 TJAPlayer3.Tx.Result_Header?.t2D描画(TJAPlayer3.app.Device, 0, 0);
 
@@ -378,7 +383,7 @@ namespace TJAPlayer3
 					if ( ( ( TJAPlayer3.Pad.b押されたDGB( Eパッド.CY ) || TJAPlayer3.Pad.b押された( E楽器パート.DRUMS, Eパッド.RD ) ) || ( TJAPlayer3.Pad.b押された( E楽器パート.DRUMS, Eパッド.LC ) || TJAPlayer3.Input管理.Keyboard.bキーが押された( (int) SlimDX.DirectInput.Key.Return ) ) ) && this.bアニメが完了 )
 					{
 						TJAPlayer3.Skin.sound取消音.t再生する();
-//						this.actFO.tフェードアウト開始();
+						//this.actFO.tフェードアウト開始();
 						base.eフェーズID = CStage.Eフェーズ.共通_フェードアウト;
 						this.eフェードアウト完了時の戻り値 = E戻り値.完了;
 					}
@@ -399,6 +404,7 @@ namespace TJAPlayer3
 		#region [ private ]
 		//-----------------
 		private CCounter ct登場用;
+		public bool b音声再生;
 		private E戻り値 eフェードアウト完了時の戻り値;
 		private CActFIFOResult actFI;
 		private CActFIFOBlack actFO;

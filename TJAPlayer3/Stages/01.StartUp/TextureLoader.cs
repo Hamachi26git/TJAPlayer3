@@ -161,6 +161,20 @@ namespace TJAPlayer3
             SongSelect_GenreBack = TxC(9, $"{SONGSELECT}GenreBackground_{{0}}.png");
             SongSelect_ScoreWindow_Text = TxC($"{SONGSELECT}ScoreWindow_Text.png");
             SongSelect_Rating = TxC($"{SONGSELECT}Rating.png");
+
+            for (int i = 0; i < SongSelect_Donchan_Select.Length; i++)
+            {
+                SongSelect_Donchan_Select[i] = TxC(SONGSELECT + @"Donchan\Select\" + i.ToString() + ".png");
+            }
+            for (int i = 0; i < SongSelect_Donchan_Normal.Length; i++)
+            {
+                SongSelect_Donchan_Normal[i] = TxC(SONGSELECT + @"Donchan\Loop\" + i.ToString() + ".png");
+            }
+            for (int i = 0; i < SongSelect_Donchan_Jump.Length; i++)
+            {
+                SongSelect_Donchan_Jump[i] = TxC(SONGSELECT + @"Donchan\Start\" + i.ToString() + ".png");
+            }
+
             #endregion
 
             #region 4_読み込み画面
@@ -176,6 +190,7 @@ namespace TJAPlayer3
             SENotes = TxC($"{GAME}SENotes.png");
             Notes_Arm = TxC($"{GAME}Notes_Arm.png");
             Judge = TxC($"{GAME}Judge.png");
+            ChipEffect = TxC($"{GAME}ChipEffect.png");
 
             Judge_Meter = TxC($"{GAME}Judge_Meter.png");
             Bar = TxC($"{GAME}Bar.png");
@@ -279,7 +294,9 @@ namespace TJAPlayer3
 
             (TJAPlayer3.Skin.Game_Gauge_Rainbow_Ptn, Gauge_Rainbow) = TxCFolder($@"{GAME}{GAUGE}Rainbow\");
 
+            Gauge_Flash = TxC($"{GAME}{GAUGE}Flash.png");
             Gauge_Soul = TxC($"{GAME}{GAUGE}Soul.png");
+            Gauge_Soul_Flash = TxC($"{GAME}{GAUGE}Soul_Flash.png");
             Gauge_Soul_Fire = TxC($"{GAME}{GAUGE}Fire.png");
 
             Gauge_Soul_Explosion = TxC(2, $"{GAME}{GAUGE}{{0}}P_Explosion.png", 1);
@@ -450,6 +467,9 @@ namespace TJAPlayer3
             SongSelect_Cursor_Right,
             SongSelect_ScoreWindow_Text,
             SongSelect_Rating;
+        public CTexture[] SongSelect_Donchan_Select = new CTexture[47],
+            SongSelect_Donchan_Normal = new CTexture[49],
+            SongSelect_Donchan_Jump = new CTexture[18];
 
         public CTexture[] SongSelect_GenreBack;
         public CTexture[] SongSelect_ScoreWindow;
@@ -470,6 +490,7 @@ namespace TJAPlayer3
             Judge_Frame,
             SENotes,
             Notes_Arm,
+            ChipEffect,
             Judge;
         public CTexture Judge_Meter,
             Bar,
@@ -540,6 +561,8 @@ namespace TJAPlayer3
         public CTexture[] Gauge_Soul_Explosion;
 
         public CTexture Gauge_Soul,
+            Gauge_Soul_Flash,
+            Gauge_Flash,
             Gauge_Soul_Fire;
         #endregion
         #region 吹き出し

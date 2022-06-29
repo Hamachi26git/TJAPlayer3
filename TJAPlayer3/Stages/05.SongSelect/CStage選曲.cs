@@ -150,7 +150,8 @@ namespace TJAPlayer3
 				for( int i = 0; i < 4; i++ )
 					this.ctキー反復用[ i ] = new CCounter( 0, 0, 0, TJAPlayer3.Timer );
 
-                //this.act難易度選択画面.bIsDifficltSelect = true;
+
+				//this.act難易度選択画面.bIsDifficltSelect = true;
 				base.On活性化();
 
 				this.actステータスパネル.t選択曲が変更された();	// 最大ランクを更新
@@ -187,28 +188,6 @@ namespace TJAPlayer3
 		{
 			if( !base.b活性化してない )
 			{
-				//this.tx背景 = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background.jpg" ), false );
-				//this.tx上部パネル = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_header_panel.png" ), false );
-				//this.tx下部パネル = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_footer panel.png" ) );
-
-				//this.txFLIP = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_skill number on gauge etc.png" ), false );
-                //this.tx難易度名 = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_difficulty name.png" ) );
-                //this.txジャンル別背景[0] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Anime.png" ) );
-                //this.txジャンル別背景[1] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_JPOP.png" ) );
-                //this.txジャンル別背景[2] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Game.png" ) );
-                //this.txジャンル別背景[3] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Namco.png" ) );
-                //this.txジャンル別背景[4] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Classic.png" ) );
-                //this.txジャンル別背景[5] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Child.png" ) );
-                //this.txジャンル別背景[6] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Variety.png" ) );
-                //this.txジャンル別背景[7] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_VOCALID.png" ) );
-                //this.txジャンル別背景[8] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Other.png" ) );
-
-                //this.tx難易度別背景[0] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Easy.png" ) );
-                //this.tx難易度別背景[1] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Normal.png" ) );
-                //this.tx難易度別背景[2] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Hard.png" ) );
-                //this.tx難易度別背景[3] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Master.png" ) );
-                //this.tx難易度別背景[4] = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_background_Edit.png" ) );
-                //this.tx下部テキスト = CDTXMania.tテクスチャの生成( CSkin.Path( @"Graphics\5_footer text.png" ) );
                 this.ct背景スクロール用タイマー = new CCounter(0, TJAPlayer3.Tx.SongSelect_Background?.szテクスチャサイズ.Width ?? 1280, 30, TJAPlayer3.Timer);
 				base.OnManagedリソースの作成();
 			}
@@ -217,20 +196,6 @@ namespace TJAPlayer3
 		{
 			if( !base.b活性化してない )
 			{
-				//CDTXMania.tテクスチャの解放( ref this.tx背景 );
-				//CDTXMania.tテクスチャの解放( ref this.tx上部パネル );
-				//CDTXMania.tテクスチャの解放( ref this.tx下部パネル );
-				//CDTXMania.tテクスチャの解放( ref this.txFLIP );
-                //CDTXMania.tテクスチャの解放( ref this.tx難易度名 );
-                //CDTXMania.tテクスチャの解放( ref this.tx下部テキスト );
-                //for( int j = 0; j < 9; j++ )
-                //{
-                //    CDTXMania.tテクスチャの解放( ref this.txジャンル別背景[ j ] );
-                //}
-                //for( int j = 0; j < 5; j++ )
-                //{
-                //    CDTXMania.tテクスチャの解放( ref this.tx難易度別背景[ j ] );
-                //}
 				base.OnManagedリソースの解放();
 			}
 		}
@@ -262,7 +227,8 @@ namespace TJAPlayer3
 
 				this.ct登場時アニメ用共通.t進行();
 
-			    if (TJAPlayer3.Tx.SongSelect_Background != null)
+
+				if (TJAPlayer3.Tx.SongSelect_Background != null)
 			    {
 			        TJAPlayer3.Tx.SongSelect_Background.t2D描画(TJAPlayer3.app.Device, 0, 0);
 
@@ -523,13 +489,6 @@ namespace TJAPlayer3
                                                 TJAPlayer3.Skin.sound決定音.t再生する();
                                             this.t曲をランダム選択する();
                                             break;
-                                        //case C曲リストノード.Eノード種別.DANI:
-                                        //    if (CDTXMania.Skin.sound段位移動.b読み込み成功)
-                                        //        CDTXMania.Skin.sound段位移動.t再生する();
-                                        //    else
-                                        //        CDTXMania.Skin.sound段位移動.t再生する();
-                                        //    this.X();
-                                        //    break;
                                     }
                                 }
                             }
@@ -621,19 +580,8 @@ namespace TJAPlayer3
 					this.actSortSongs.t進行描画();
 					this.actQuickConfig.t進行描画();
 				}
-                //------------------------------
-                //if (this.act難易度選択画面.bIsDifficltSelect)
-                //{
 
-                //    if (this.ctDiffSelect移動待ち.n現在の値 == this.ctDiffSelect移動待ち.n終了値)
-                //    {
-                //        this.act難易度選択画面.On進行描画();
-                //        CDTXMania.act文字コンソール.tPrint(0, 0, C文字コンソール.Eフォント種別.赤, "NowStage:DifficltSelect");
-                //    }
-                //    CDTXMania.act文字コンソール.tPrint(0, 16, C文字コンソール.Eフォント種別.赤, "Count:" + this.ctDiffSelect移動待ち.n現在の値);
-                //}
-                //------------------------------
-				switch ( base.eフェーズID )
+                switch ( base.eフェーズID )
 				{
 					case CStage.Eフェーズ.共通_フェードイン:
 						if( this.actFIFO.On進行描画() != 0 )
@@ -749,7 +697,7 @@ namespace TJAPlayer3
 		public CActSortSongs actSortSongs;
 		private CActSelectQuickConfig actQuickConfig;
 
-                private int nGenreBack;
+		private int nGenreBack;
 		private bool bBGM再生済み;
 		private STキー反復用カウンタ ctキー反復用;
 		public CCounter ct登場時アニメ用共通;
